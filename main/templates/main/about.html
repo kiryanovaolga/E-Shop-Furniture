@@ -9,7 +9,10 @@
 
 <!-- Контент на странице -->
 {% block content %}
-    <h1 class="mt-5 pt-5"><strong>{{content}}</strong></h1>
+    <div class="mt-5 pt-5">
+        <h2 class="m-2" ><strong>{{content}}</strong></h2>
+        <h3 class="m-2 fs-4">{{text_on_page}}</h3>
+    </div>
 {% endblock content %}
 
 <!--Блок футер -->
