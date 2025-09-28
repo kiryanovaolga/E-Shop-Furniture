@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # Устанавливаем debug toolbar приложение
+    "debug_toolbar",
+    # ---------------
     "main",
     "goods",
 ]
@@ -50,6 +53,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    # Устанавливаем debug toolbar  промежуточ. програм. обеспечение
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "app.urls"
@@ -125,6 +130,14 @@ STATICFILES_DIRS = [BASE_DIR / "static"]  # где Django будет искат�
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+
+
+# список IP-адресов, с которых доступна панель Debug Toolbar.
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
 
 
 # Автоматическая инкриментация, то есть автоматическое создание id
