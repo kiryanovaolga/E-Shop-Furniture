@@ -126,4 +126,6 @@ STATICFILES_DIRS = [BASE_DIR / "static"]  # где Django будет искат�
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
+
+# Автоматическая инкриментация, то есть автоматическое создание id
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
