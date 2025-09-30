@@ -75,3 +75,14 @@ class Products(models.Model):
 
     def __str__(self):
         return f"{self.name} | Quantity - {self.quantity}"
+
+    # Работа с id. Выводит нули через f-строку, чтобы в id было 5 знаков
+    def display_id(self):
+        return f"{self.id:05}"  # 00007
+
+    # Расчет окончательной цены товара со скидкой
+    @property
+    def sell_price(self):
+        if self.discount:
+            return round(self.price - self.price * self.discount / 100, 2)
+        return self.price

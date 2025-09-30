@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+from django.conf.global_settings import MEDIA_ROOT, MEDIA_URL
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -123,10 +125,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = (
-    "static/"  # указывает URL-адрес, по которому будут доступны статические файл
-)
+
+# указывает URL-адрес, по которому будут доступны статические файл
+STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]  # где Django будет искать статические файлы
+
+# то URL, по которому браузер сможет получить доступ к этим файлам.
+MEDIA_URL = "media/"
+
+# Это путь на твоём сервере/компьютере, куда Django сохраняет загруженные файлы.
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
