@@ -6,7 +6,9 @@ from django.template import context
 from goods.models import Products
 
 
-def catalog(request, category_slug, page=1):
+def catalog(request, category_slug):
+    page = request.GET.get("page", 1)
+
     if category_slug == "all-categories":
         goods = Products.objects.all()
     else:
@@ -15,7 +17,7 @@ def catalog(request, category_slug, page=1):
         goods = get_list_or_404(Products, category__slug=category_slug)
 
     paginator = Paginator(goods, 3)  # Разбить goods на страницы по 3 товара
-    current_page = paginator.page(page)  # Получаем текущую страницу
+    current_page = paginator.page(int(page))  # Получаем текущую страницу
 
     context = {
         "title": "Home Catalog",
