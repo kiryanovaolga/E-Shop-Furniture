@@ -1,5 +1,5 @@
 from atexit import register
-from urllib.parse import urlencode
+from django.utils.http import urlencode
 from django import template
 from goods.models import Categories
 

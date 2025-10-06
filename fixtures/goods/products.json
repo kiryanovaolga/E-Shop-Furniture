@@ -6,9 +6,9 @@
             "name": "Tea table and three chairs",
             "slug": "tea-table-and-three-chairs",
             "description": "A set of three chairs and a designer table for the living room.",
-            "image": "",
+            "image": "goods_images/set_of_tea_table_and_three_chairs.jpg",
             "price": "150.00",
-            "discount": "0.00",
+            "discount": "10.00",
             "quantity": 10,
             "category": 5
         }
@@ -20,7 +20,7 @@
             "name": "Tea table and two chairs",
             "slug": "tea-table-and-two-chairs",
             "description": "A set of a table and two chairs in a minimalist style.",
-            "image": "",
+            "image": "goods_images/set_of_tea_table_and_two_chairs.jpg",
             "price": "93.00",
             "discount": "0.00",
             "quantity": 12,
@@ -34,9 +34,9 @@
             "name": "Double bed",
             "slug": "double-bed",
             "description": "A double bed with a headboard, highly orthopedic and comfortable.",
-            "image": "",
+            "image": "goods_images/double_bed.jpg",
             "price": "670.00",
-            "discount": "0.00",
+            "discount": "25.00",
             "quantity": 7,
             "category": 6
         }
@@ -48,7 +48,7 @@
             "name": "Kitchen table with sink",
             "slug": "kitchen-table-with-sink",
             "description": "A kitchen dining table with a built-in sink and chairs.",
-            "image": "",
+            "image": "goods_images/kitchen_table.jpg",
             "price": "365.00",
             "discount": "0.00",
             "quantity": 15,
@@ -62,10 +62,10 @@
             "name": "Kitchen table with built-in units",
             "slug": "kitchen-table-with-built-in-units",
             "description": "A kitchen table with a built-in stove and sink. Lots of shelves and a beautiful design.",
-            "image": "",
+            "image": "goods_images/kitchen_table_2.jpg",
             "price": "430.00",
             "discount": "0.00",
-            "quantity": 0,
+            "quantity": 5,
             "category": 5
         }
     },
@@ -76,7 +76,7 @@
             "name": "Corner sofa for living room",
             "slug": "corner-sofa-for-living-room",
             "description": "A corner sofa that unfolds into a double bed, perfect for the living room and guests.",
-            "image": "",
+            "image": "goods_images/corner_sofa.jpg",
             "price": "610.00",
             "discount": "0.00",
             "quantity": 9,
@@ -90,7 +90,7 @@
             "name": "Bedside table",
             "slug": "bedside-table",
             "description": "Bedside table with two drawers (flower not included).",
-            "image": "",
+            "image": "goods_images/bedside_table.jpg",
             "price": "55.00",
             "discount": "0.00",
             "quantity": 11,
@@ -104,25 +104,11 @@
             "name": "Regular sofa",
             "slug": "regular-sofa",
             "description": "A regular sofa, nothing special to describe.",
-            "image": "",
+            "image": "goods_images/sofa.jpg",
             "price": "190.00",
-            "discount": "0.00",
+            "discount": "15.00",
             "quantity": 5,
             "category": 10
-        }
-    },
-    {
-        "model": "goods.products",
-        "pk": 9,
-        "fields": {
-            "name": "Office chair",
-            "slug": "office-chair",
-            "description": "A chair, very comfortable, but after all itĺs just a chair.",
-            "image": "",
-            "price": "30.00",
-            "discount": "0.00",
-            "quantity": 25,
-            "category": 8
         }
     },
     {
@@ -132,7 +118,7 @@
             "name": "Plant",
             "slug": "plant",
             "description": "A plant to decorate your interior, adding freshness and serenity to the atmosphere.",
-            "image": "",
+            "image": "goods_images/plants_WSc0d5c.jpg",
             "price": "10.00",
             "discount": "0.00",
             "quantity": 17,
@@ -146,7 +132,7 @@
             "name": "Stylized flower",
             "slug": "stylized-flower",
             "description": "A designer flower (possibly artificial) to decorate your interior.",
-            "image": "",
+            "image": "goods_images/flower.jpg",
             "price": "15.00",
             "discount": "0.00",
             "quantity": 25,
@@ -160,11 +146,25 @@
             "name": "Bedside Table Origin",
             "slug": "bedside-table-origin",
             "description": "A rather unusual-looking table, suitable for placement next to the bed.",
-            "image": "",
+            "image": "goods_images/strange_table.jpg",
             "price": "25.00",
             "discount": "0.00",
             "quantity": 5,
             "category": 6
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 13,
+        "fields": {
+            "name": "Office Chair",
+            "slug": "office-chair",
+            "description": "A chair, very comfortable, but after all itňs just a chair.",
+            "image": "goods_images/office_chair_Yv1aXtA.jpg",
+            "price": "100.00",
+            "discount": "15.00",
+            "quantity": 11,
+            "category": 8
         }
     }
 ]

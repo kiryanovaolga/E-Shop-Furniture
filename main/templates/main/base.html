@@ -57,10 +57,10 @@
                                 Мой профиль
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item  text-white" href="carts/cart.html">Корзина</a></li>
-                                <li><a class="dropdown-item  text-white" href="users/profile.html">Личный кабинет</a>
+                                <li><a class="dropdown-item  text-white" href="carts/cart.html">Cart</a></li>
+                                <li><a class="dropdown-item  text-white" href="users/profile.html">Your Account</a>
                                 </li>
-                                <li><a class="dropdown-item  text-white" href="{% url "admin:index" %}">Админ панель</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url "admin:index" %}">Admin Account</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -68,9 +68,9 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success text-white" type="submit">Поиск</button>
+                    <form action = {% url "catalog:search" %} method="get" class="d-flex" role="search" >
+                        <input class="form-control me-2" name='q' type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success text-white" type="submit">Search</button>
                     </form>
                 </div>
             </div>
