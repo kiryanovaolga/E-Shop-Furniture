@@ -2,6 +2,7 @@
 {% load static %}
 {% load goods_tags %}
 
+<!-- Стиль footer-a для главной страницы -->
 {% block css %}
     <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css"%}">
 {% endblock css %}
@@ -59,6 +60,12 @@
             </form>
         </div>
 
+        {% if request.GET.q %}
+        <h3 class="mt-4">Search results for {{request.GET.q}}: </h3>
+        {% if not goods %}
+        <h2 class = "mt-4">Upps Sorry...No results found!</h2>
+        {% endif %}
+        {% endif %}
 
         {% for product in goods %}
         <!-- Карта товара -->
@@ -71,9 +78,24 @@
                 {% endif %}
                 <div class="card-body">
                     <a href="{% url "catalog:product" product.slug %}">
-                        <p class="card-title">{{product.name}}</p>
+                        <p class="card-title">
+                            {% autoescape off %}
+                                {% if product.headline %}
+                                {{product.headline}}
+                                {% else %}{{product.name}}
+                                {% endif %}</p>
+                            {% endautoescape %}
                     </a>
-                    <p class="card-text ">{{product.description|truncatechars:45}}</p>
+                    <p class="card-text ">
+                        {% autoescape off %}
+                                {% if product.bodyline%}
+                                {{product.bodyline}}
+                                {% else %}{{product.description|truncatechars:45}}
+                                {% endif %}</p>
+                            {% endautoescape %}
+                        
+                        
+                    </p>
                     <p class="product_id">id: {{product.display_id}}</p>
                     <div class="d-flex justify-content-between">
                         <!--Если на товар есть скидка-->
@@ -97,6 +119,7 @@
 
     </div>
     <!-- Пагинация -->
+    {% if goods %} 
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center my-4">
             <div class="custom-shadow d-flex">
@@ -130,6 +153,7 @@
             </div>
         </ul>
     </nav>
+    {% endif %}
 {% endblock content %}
 
 {% block footer %}
