@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # Прилож. для полнотекстового поиска
+    "django.contrib.postgres",
     # Устанавливаем debug toolbar приложение
     "debug_toolbar",
     # ---------------
@@ -85,8 +87,12 @@ WSGI_APPLICATION = "app.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "home_db",
+        "USER": "home",
+        "PASSWORD": "home",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
