@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     # ---------------
     "main",
     "goods",
+    "users",
 ]
 
 MIDDLEWARE = [
@@ -66,7 +67,8 @@ ROOT_URLCONF = "app.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        # Django будет искать templates и в корне
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

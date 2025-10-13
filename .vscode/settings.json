@@ -1,10 +1,8 @@
 {
     "git.autoRepositoryDetection": "subFolders",
     "breadcrumbs.enabled": true,
-
     "debug.autoExpandLazyVariables": "on",
     "debug.inlineValues": "on",
-
     "python.languageServer": "Pylance",
     "python.analysis.typeCheckingMode": "off",
     "python.analysis.diagnosticMode": "openFilesOnly",
@@ -23,7 +21,6 @@
             "includeAllSymbols": true
         }
     ],
-      
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
@@ -34,15 +31,13 @@
         "**/*.html": "html",
         "**/templates/*/*.html": "django-html",
         "**/templates/*/*/*.html": "django-html",
-        "**/templates/*": "django-txt",
+        "**/templates/*": "django-html",
         "**/requirements{/**,*}.{txt,in}": "pip-requirements"
     },
     "django.snippets.exclude": [
         "cms",
         "wagtail"
     ],
-
-
     "[django-html]": {
         "editor.defaultFormatter": "batisteo.vscode-django",
         "breadcrumbs.showClasses": true,
